@@ -14,31 +14,37 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
- * UpdateForm class provides the user interface for updating a doctor's information.
+ * V04 - Doctor management program
+ * 
+ * @author Nguyen Ho Phuoc An - CE190747
+ */
+/**
+ * UpdateForm class provides the user interface for updating a doctor's
+ * information.
  */
 public class UpdateForm extends JFrame {
 
     // UI components
-    private final JLabel lbCode = new JLabel("Code: ");
-    private final JTextField tfCode = new JTextField();
-    private final JPanel codePanel = new JPanel();
+    private final JLabel lbCode = new JLabel("Code: "); // Label for doctor's code
+    private final JTextField tfCode = new JTextField(); // Text field for entering doctor's code
+    private final JPanel codePanel = new JPanel(); // Panel to hold code label and text field
 
-    private final JLabel lbName = new JLabel("Name: ");
-    private final JTextField tfName = new JTextField();
-    private final JPanel namePanel = new JPanel();
+    private final JLabel lbName = new JLabel("Name: "); // Label for doctor's name
+    private final JTextField tfName = new JTextField(); // Text field for entering doctor's name
+    private final JPanel namePanel = new JPanel(); // Panel to hold name label and text field
 
-    private final JLabel lbSpecialization = new JLabel("Specialization: ");
-    private final JTextField tfSpecialization = new JTextField();
-    private final JPanel specializationPanel = new JPanel();
+    private final JLabel lbSpecialization = new JLabel("Specialization: "); // Label for doctor's specialization
+    private final JTextField tfSpecialization = new JTextField(); // Text field for entering doctor's specialization
+    private final JPanel specializationPanel = new JPanel(); // Panel to hold specialization label and text field
 
-    private final JLabel lbAvailability = new JLabel("Availability: ");
-    private final JTextField tfAvailability = new JTextField();
-    private final JPanel availabilityPanel = new JPanel();
+    private final JLabel lbAvailability = new JLabel("Availability: "); // Label for doctor's availability
+    private final JTextField tfAvailability = new JTextField(); // Text field for entering doctor's availability
+    private final JPanel availabilityPanel = new JPanel(); // Panel to hold availability label and text field
 
-    private final JButton btnMenu = new JButton("Menu");
-    private final JButton btnFind = new JButton("Find");
-    private final JButton btnUpdate = new JButton("Update");
-    private final JPanel buttonPanel = new JPanel();
+    private final JButton btnMenu = new JButton("Menu"); // Button to navigate to the menu
+    private final JButton btnFind = new JButton("Find"); // Button to find a doctor
+    private final JButton btnUpdate = new JButton("Update"); // Button to update doctor's information
+    private final JPanel buttonPanel = new JPanel(); // Panel to hold buttons
 
     /**
      * Adds the code panel to the form.
@@ -55,6 +61,7 @@ public class UpdateForm extends JFrame {
 
     /**
      * Adds the name panel to the form.
+     * 
      * @param name The name to display.
      */
     private void addNamePanel(String name) {
@@ -71,6 +78,7 @@ public class UpdateForm extends JFrame {
 
     /**
      * Adds the specialization panel to the form.
+     * 
      * @param specialization The specialization to display.
      */
     private void addSpecializationPanel(String specialization) {
@@ -87,6 +95,7 @@ public class UpdateForm extends JFrame {
 
     /**
      * Adds the availability panel to the form.
+     * 
      * @param availability The availability to display.
      */
     private void addAvailabilityPanel(String availability) {
@@ -116,6 +125,7 @@ public class UpdateForm extends JFrame {
 
     /**
      * Adds action listeners to the buttons.
+     * 
      * @param listener The listener to be added.
      */
     private void addUpdateListener(UpdateListener listener) {
@@ -160,10 +170,11 @@ public class UpdateForm extends JFrame {
 
     /**
      * Displays the information of the doctor to be updated.
-     * @param code The code of the doctor.
-     * @param name The name of the doctor.
+     * 
+     * @param code           The code of the doctor.
+     * @param name           The name of the doctor.
      * @param specialization The specialization of the doctor.
-     * @param availability The availability of the doctor.
+     * @param availability   The availability of the doctor.
      */
     void showInformation(String code, String name, String specialization, String availability) {
         // Remove the text field for code
@@ -198,6 +209,7 @@ public class UpdateForm extends JFrame {
 
     /**
      * Gets the code entered in the text field.
+     * 
      * @return The code as a string.
      */
     String getCodeFromTextField() {
@@ -207,6 +219,7 @@ public class UpdateForm extends JFrame {
 
     /**
      * Gets the name entered in the text field.
+     * 
      * @return The name as a string.
      */
     String getNameFromTextField() {
@@ -216,6 +229,7 @@ public class UpdateForm extends JFrame {
 
     /**
      * Gets the specialization entered in the text field.
+     * 
      * @return The specialization as a string.
      */
     String getSpecializationFromTextField() {
@@ -225,6 +239,7 @@ public class UpdateForm extends JFrame {
 
     /**
      * Gets the availability entered in the text field.
+     * 
      * @return The availability as a string.
      */
     String getAvailabilityFromTextField() {

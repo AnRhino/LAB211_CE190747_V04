@@ -9,15 +9,21 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
+ * V04 - Doctor management program
+ * 
+ * @author Nguyen Ho Phuoc An - CE190747
+ */
+/**
  * TableListener class handles actions for the TableForm.
  */
 public class TableListener implements ActionListener {
 
     // Reference to the TableForm
-    private final TableForm form; 
+    private final TableForm form;
 
     /**
      * Constructor for TableListener.
+     * 
      * @param form The TableForm associated with this listener.
      */
     public TableListener(TableForm form) {
@@ -27,6 +33,7 @@ public class TableListener implements ActionListener {
 
     /**
      * Handles button click events.
+     * 
      * @param e The action event triggered by button clicks.
      */
     @Override

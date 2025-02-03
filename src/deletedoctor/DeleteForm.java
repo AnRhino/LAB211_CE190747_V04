@@ -15,18 +15,23 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
+ * V04 - Doctor management program
+ * 
+ * @author Nguyen Ho Phuoc An - CE190747
+ */
+/**
  * DeleteForm class provides the user interface for deleting a doctor.
  */
 public class DeleteForm extends JFrame {
 
     // UI components
-    private final JTextField tfCode = new JTextField();
-    private final JPanel infoPanel = new JPanel();
+    private final JTextField tfCode = new JTextField(); // Text field for entering the doctor's code
+    private final JPanel infoPanel = new JPanel(); // Panel to display doctor information
 
-    private final JButton btnMenu = new JButton("Menu");
-    private final JButton btnFind = new JButton("Find");
-    private final JButton btnDelete = new JButton("Delete");
-    private final JPanel buttonPanel = new JPanel();
+    private final JButton btnMenu = new JButton("Menu"); // Button to navigate to the menu
+    private final JButton btnFind = new JButton("Find"); // Button to find a doctor
+    private final JButton btnDelete = new JButton("Delete"); // Button to delete a doctor
+    private final JPanel buttonPanel = new JPanel(); // Panel to hold buttons
 
     /**
      * Sets up the window for the delete form.
@@ -88,6 +93,7 @@ public class DeleteForm extends JFrame {
 
     /**
      * Adds action listeners to the buttons.
+     * 
      * @param listener The listener to be added.
      */
     private void addDeleteListener(DeleteListener listener) {
@@ -109,10 +115,11 @@ public class DeleteForm extends JFrame {
 
     /**
      * Displays the information of the doctor to be deleted.
-     * @param code The code of the doctor.
-     * @param name The name of the doctor.
+     * 
+     * @param code           The code of the doctor.
+     * @param name           The name of the doctor.
      * @param specialization The specialization of the doctor.
-     * @param availability The availability of the doctor.
+     * @param availability   The availability of the doctor.
      */
     void showInformation(String code, String name, String specialization, String availability) {
         // Set the layout for the info panel
@@ -139,6 +146,7 @@ public class DeleteForm extends JFrame {
 
     /**
      * Gets the code entered in the text field.
+     * 
      * @return The code as a string.
      */
     String getCodeFromTextField() {

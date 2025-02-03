@@ -8,17 +8,19 @@ package main;
 /**
  * V04 - Doctor management program
  *
- * This class serves as the main entry point for the Doctor management program,
- * which handles the initialization and execution of the application.
- *
  * @author Nguyen Ho Phuoc An - CE190747
  * 
- *         Last modified: 3/2/2025
+ * Last modified: 3/2/2025
+ */
+/**
+ * This class serves as the main entry point for the Doctor management program,
+ * which handles the initialization and execution of the application.
  */
 public class Main {
 
     /**
      * Main method to run the application.
+     * 
      * @param args Command line arguments.
      */
     public static void main(String[] args) {

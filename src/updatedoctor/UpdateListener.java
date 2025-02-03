@@ -10,17 +10,23 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
 /**
+ * V04 - Doctor management program
+ * 
+ * @author Nguyen Ho Phuoc An - CE190747
+ */
+/**
  * UpdateListener class handles actions for the UpdateForm.
  */
 public class UpdateListener implements ActionListener {
 
     // Reference to the UpdateForm
-    private final UpdateForm form; 
+    private final UpdateForm form;
     // Doctor object to be updated
-    private database.Doctor doctor; 
+    private database.Doctor doctor;
 
     /**
      * Constructor for UpdateListener.
+     * 
      * @param form The UpdateForm associated with this listener.
      */
     public UpdateListener(UpdateForm form) {
@@ -30,6 +36,7 @@ public class UpdateListener implements ActionListener {
 
     /**
      * Handles button click events.
+     * 
      * @param e The action event triggered by button clicks.
      */
     @Override
@@ -45,7 +52,8 @@ public class UpdateListener implements ActionListener {
                     JOptionPane.showMessageDialog(null, "Code not found!");
                 } else {
                     // Show the doctor's information
-                    form.showInformation(doctor.getCode(), doctor.getName(), doctor.getSpecialization(), doctor.getAvailability() + "");
+                    form.showInformation(doctor.getCode(), doctor.getName(), doctor.getSpecialization(),
+                            doctor.getAvailability() + "");
                 }
                 break;
             case "Update":

@@ -10,16 +10,26 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 /**
+ * V04 - Doctor management program
+ * 
+ * @author Nguyen Ho Phuoc An - CE190747
+ */
+/**
  * MenuForm class provides the main menu interface for the application.
  */
 public class MenuForm extends JFrame {
 
-    // Buttons for the menu options
+    // Button to insert a new doctor
     private final JButton btnInsertDoctor = new JButton("Insert Doctor");
+    // Button to search for a doctor
     private final JButton btnSearchDoctor = new JButton("Search Doctor");
+    // Button to update a doctor's information
     private final JButton btnUpdateDoctor = new JButton("Update Doctor");
+    // Button to delete a doctor
     private final JButton btnDeleteDoctor = new JButton("Delete Doctor");
+    // Button to exit the application
     private final JButton btnExit = new JButton("Exit");
+    // Listener for menu actions
     private final MenuListener menuListener = new MenuListener(this);
 
     /**
@@ -86,7 +96,7 @@ public class MenuForm extends JFrame {
      */
     void goUpdate() {
         // Dispose of the current window
-        this.dispose();;
+        this.dispose();
         // Create and run the update form
         updatedoctor.UpdateForm updateForm = new updatedoctor.UpdateForm();
         updateForm.run();
@@ -97,7 +107,7 @@ public class MenuForm extends JFrame {
      */
     void goDelete() {
         // Dispose of the current window
-        this.dispose();;
+        this.dispose();
         // Create and run the delete form
         deletedoctor.DeleteForm deleteForm = new deletedoctor.DeleteForm();
         deleteForm.run();

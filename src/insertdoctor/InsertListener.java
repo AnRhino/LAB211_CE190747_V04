@@ -11,15 +11,21 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
 /**
+ * V04 - Doctor management program
+ * 
+ * @author Nguyen Ho Phuoc An - CE190747
+ */
+/**
  * InsertListener class handles actions for the InsertForm.
  */
 class InsertListener implements ActionListener {
 
     // Reference to the InsertForm
-    private final InsertForm form; 
+    private final InsertForm form;
 
     /**
      * Constructor for InsertListener.
+     * 
      * @param form The InsertForm associated with this listener.
      */
     public InsertListener(InsertForm form) {
@@ -29,6 +35,7 @@ class InsertListener implements ActionListener {
 
     /**
      * Handles button click events.
+     * 
      * @param e The action event triggered by button clicks.
      */
     @Override

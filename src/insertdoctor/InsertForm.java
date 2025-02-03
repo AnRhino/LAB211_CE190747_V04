@@ -15,29 +15,38 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
+ * V04 - Doctor management program
+ * 
+ * @author Nguyen Ho Phuoc An - CE190747
+ */
+/**
  * InsertForm class provides the user interface for inserting a new doctor.
- * @author PeterNguyen
  */
 public class InsertForm extends JFrame {
 
-    private final JPanel centerPanel = new JPanel();
+    // Center panel for labels and text fields
+    private final JPanel centerPanel = new JPanel(); // Panel to hold labels and text fields
 
-    private final JLabel lbCode = new JLabel("Code: ");
-    private final JLabel lbName = new JLabel("Name: ");
-    private final JLabel lbSpecialization = new JLabel("Specialization: ");
-    private final JLabel lbAvailability = new JLabel("Availability: ");
-    private final JPanel lablePanel = new JPanel();
+    // Labels for input fields
+    private final JLabel lbCode = new JLabel("Code: "); // Label for doctor's code
+    private final JLabel lbName = new JLabel("Name: "); // Label for doctor's name
+    private final JLabel lbSpecialization = new JLabel("Specialization: "); // Label for doctor's specialization
+    private final JLabel lbAvailability = new JLabel("Availability: "); // Label for doctor's availability
+    private final JPanel lablePanel = new JPanel(); // Panel to hold labels
 
-    private final JTextField tfCode = new JTextField(15);
-    private final JTextField tfName = new JTextField(15);
-    private final JTextField tfSpecialization = new JTextField(15);
-    private final JTextField tfAvailability = new JTextField(15);
-    private final JPanel textFieldPanel = new JPanel();
+    // Text fields for user input
+    private final JTextField tfCode = new JTextField(15); // Text field for entering doctor's code
+    private final JTextField tfName = new JTextField(15); // Text field for entering doctor's name
+    private final JTextField tfSpecialization = new JTextField(15); // Text field for entering doctor's specialization
+    private final JTextField tfAvailability = new JTextField(15); // Text field for entering doctor's availability
+    private final JPanel textFieldPanel = new JPanel(); // Panel to hold text fields
 
-    private final InsertListener insertListener = new InsertListener(this);
-    private final JButton btnMenu = new JButton("Menu");
-    private final JButton btnInsert = new JButton("Insert");
-    private final JPanel buttonPanel = new JPanel();
+    // Listener for handling insert actions
+    private final InsertListener insertListener = new InsertListener(this); // Listener for insert actions
+    // Buttons for menu and insert actions
+    private final JButton btnMenu = new JButton("Menu"); // Button to navigate to the menu
+    private final JButton btnInsert = new JButton("Insert"); // Button to insert a new doctor
+    private final JPanel buttonPanel = new JPanel(); // Panel to hold buttons
 
     /**
      * Sets up the window for the insert form.
@@ -118,6 +127,7 @@ public class InsertForm extends JFrame {
 
     /**
      * Gets the code entered in the text field.
+     * 
      * @return The code as a string.
      */
     String getCodeFromTextField() {
@@ -126,6 +136,7 @@ public class InsertForm extends JFrame {
 
     /**
      * Gets the name entered in the text field.
+     * 
      * @return The name as a string.
      */
     String getNameFromTextField() {
@@ -134,6 +145,7 @@ public class InsertForm extends JFrame {
 
     /**
      * Gets the specialization entered in the text field.
+     * 
      * @return The specialization as a string.
      */
     String getSpecializationFromTextField() {
@@ -142,6 +154,7 @@ public class InsertForm extends JFrame {
 
     /**
      * Gets the availability entered in the text field.
+     * 
      * @return The availability as a string.
      */
     String getAvailabilityFromTextField() {

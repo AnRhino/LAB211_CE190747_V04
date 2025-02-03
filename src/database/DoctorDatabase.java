@@ -22,10 +22,11 @@ public class DoctorDatabase {
 
     /**
      * Adds a new doctor to the database.
-     * @param code The unique code for the doctor.
-     * @param name The name of the doctor.
+     * 
+     * @param code           The unique code for the doctor.
+     * @param name           The name of the doctor.
      * @param specialization The specialization of the doctor.
-     * @param availability The availability of the doctor.
+     * @param availability   The availability of the doctor.
      */
     public static void addDoctor(String code, String name, String specialization, String availability) {
         // Convert code to uppercase
@@ -36,10 +37,11 @@ public class DoctorDatabase {
 
     /**
      * Updates an existing doctor's information in the database.
-     * @param code The unique code for the doctor.
-     * @param name The new name of the doctor.
+     * 
+     * @param code           The unique code for the doctor.
+     * @param name           The new name of the doctor.
      * @param specialization The new specialization of the doctor.
-     * @param availability The new availability of the doctor.
+     * @param availability   The new availability of the doctor.
      */
     public static void updateDoctor(String code, String name, String specialization, String availability) {
         // Call addDoctor to update the doctor's information
@@ -48,6 +50,7 @@ public class DoctorDatabase {
 
     /**
      * Deletes a doctor from the database using their code.
+     * 
      * @param code The unique code for the doctor to be deleted.
      */
     public static void deleteDoctor(String code) {
@@ -57,6 +60,7 @@ public class DoctorDatabase {
 
     /**
      * Searches for doctors based on a search text.
+     * 
      * @param searchText The text to search for in doctor details.
      * @return A 2D array containing the details of matching doctors.
      */
@@ -105,6 +109,7 @@ public class DoctorDatabase {
 
     /**
      * Finds a doctor by their unique code.
+     * 
      * @param code The unique code for the doctor.
      * @return The Doctor object if found, otherwise null.
      */
@@ -117,6 +122,7 @@ public class DoctorDatabase {
 
     /**
      * Validates the doctor code.
+     * 
      * @param code The code to validate.
      * @return An error message if invalid, otherwise null.
      */
@@ -149,6 +155,7 @@ public class DoctorDatabase {
 
     /**
      * Validates the doctor's name.
+     * 
      * @param name The name to validate.
      * @return An error message if invalid, otherwise null.
      */
@@ -165,6 +172,7 @@ public class DoctorDatabase {
 
     /**
      * Validates the doctor's specialization.
+     * 
      * @param specialization The specialization to validate.
      * @return An error message if invalid, otherwise null.
      */
@@ -181,6 +189,7 @@ public class DoctorDatabase {
 
     /**
      * Validates the doctor's availability.
+     * 
      * @param availability The availability to validate.
      * @return An error message if invalid, otherwise null.
      */
@@ -205,10 +214,11 @@ public class DoctorDatabase {
 
     /**
      * Validates all fields for a doctor.
-     * @param code The code of the doctor.
-     * @param name The name of the doctor.
+     * 
+     * @param code           The code of the doctor.
+     * @param name           The name of the doctor.
      * @param specialization The specialization of the doctor.
-     * @param availability The availability of the doctor.
+     * @param availability   The availability of the doctor.
      * @return An error message if any field is invalid, otherwise null.
      */
     public static String checkAllValid(String code, String name, String specialization, String availability) {

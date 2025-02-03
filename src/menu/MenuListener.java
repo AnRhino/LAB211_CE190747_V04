@@ -9,6 +9,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
+ * V04 - Doctor management program
+ * 
+ * @author Nguyen Ho Phuoc An - CE190747
+ */
+/**
  * MenuListener class handles actions for the MenuForm.
  */
 class MenuListener implements ActionListener {
@@ -18,6 +23,7 @@ class MenuListener implements ActionListener {
 
     /**
      * Constructor for MenuListener.
+     * 
      * @param form The MenuForm associated with this listener.
      */
     public MenuListener(MenuForm form) {
@@ -27,12 +33,13 @@ class MenuListener implements ActionListener {
 
     /**
      * Handles button click events.
+     * 
      * @param e The action event triggered by button clicks.
      */
     @Override
     public void actionPerformed(ActionEvent e) {
         // Switch based on the action command
-        switch(e.getActionCommand()) {
+        switch (e.getActionCommand()) {
             case "Insert Doctor":
                 // Navigate to the insert doctor form
                 form.goInsert();

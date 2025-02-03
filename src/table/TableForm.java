@@ -14,6 +14,11 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 /**
+ * V04 - Doctor management program
+ * 
+ * @author Nguyen Ho Phuoc An - CE190747
+ */
+/**
  * TableForm class displays the search results in a table format.
  */
 public class TableForm extends JFrame {
@@ -24,16 +29,17 @@ public class TableForm extends JFrame {
     private final JScrollPane jScrollPane;
 
     // Buttons for menu and search again actions
-    private final JButton btnMenu = new JButton("Menu");
-    private final JButton btnSearchAgain = new JButton("Search again");
-    private final JPanel buttonPanel = new JPanel();
+    private final JButton btnMenu = new JButton("Menu"); // Button to navigate to the menu
+    private final JButton btnSearchAgain = new JButton("Search again"); // Button to search again
+    private final JPanel buttonPanel = new JPanel(); // Panel to hold buttons
 
     // Listener for handling table actions
-    private final TableListener tableListener = new TableListener(this);
+    private final TableListener tableListener = new TableListener(this); // Listener for table actions
 
     /**
      * Constructor for TableForm.
-     * @param data The data to be displayed in the table.
+     * 
+     * @param data   The data to be displayed in the table.
      * @param header The headers for the table columns.
      */
     public TableForm(String[][] data, String[] header) {
