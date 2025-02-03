@@ -13,17 +13,16 @@ package main;
  *
  * @author Nguyen Ho Phuoc An - CE190747
  * 
- * Last modified: 28/01/2025
+ *         Last modified: 3/2/2025
  */
 public class Main {
 
     /**
-     * The main method serves as the entry point for the program.
-     * It initializes the Menu and starts its execution.
-     *
-     * @param args the command line arguments
+     * Main method to run the application.
+     * @param args Command line arguments.
      */
     public static void main(String[] args) {
+        // Create and run the menu form
         menu.MenuForm form = new menu.MenuForm();
         form.run();
     }

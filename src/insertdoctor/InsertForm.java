@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
- *
+ * InsertForm class provides the user interface for inserting a new doctor.
  * @author PeterNguyen
  */
 public class InsertForm extends JFrame {
@@ -39,6 +39,9 @@ public class InsertForm extends JFrame {
     private final JButton btnInsert = new JButton("Insert");
     private final JPanel buttonPanel = new JPanel();
 
+    /**
+     * Sets up the window for the insert form.
+     */
     private void setupWindow() {
         this.setTitle("Insert Doctor");
         this.setLocationRelativeTo(null);
@@ -50,6 +53,9 @@ public class InsertForm extends JFrame {
         this.setSize(320, this.getHeight());
     }
 
+    /**
+     * Adds labels and text fields to the center panel.
+     */
     private void addLablesAndTextFields() {
         addLabels();
         addTextFields();
@@ -59,6 +65,9 @@ public class InsertForm extends JFrame {
         this.add(centerPanel, BorderLayout.CENTER);
     }
 
+    /**
+     * Adds labels to the form.
+     */
     private void addLabels() {
         lablePanel.setLayout(new GridLayout(4, 1));
         lablePanel.add(lbCode);
@@ -67,6 +76,9 @@ public class InsertForm extends JFrame {
         lablePanel.add(lbAvailability);
     }
 
+    /**
+     * Adds text fields to the form.
+     */
     private void addTextFields() {
         textFieldPanel.setLayout(new GridLayout(4, 1));
         textFieldPanel.add(tfCode);
@@ -75,6 +87,9 @@ public class InsertForm extends JFrame {
         textFieldPanel.add(tfAvailability);
     }
 
+    /**
+     * Adds buttons to the form.
+     */
     private void addButtons() {
         buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 30, 0));
         btnMenu.addActionListener(insertListener);
@@ -84,29 +99,51 @@ public class InsertForm extends JFrame {
         this.add(buttonPanel, BorderLayout.SOUTH);
     }
 
+    /**
+     * Navigates back to the menu.
+     */
     void goMenu() {
         this.dispose();
         menu.MenuForm menuForm = new menu.MenuForm();
         menuForm.run();
     }
 
+    /**
+     * Runs the insert form.
+     */
     public void run() {
         setupWindow();
         this.setVisible(true);
     }
 
+    /**
+     * Gets the code entered in the text field.
+     * @return The code as a string.
+     */
     String getCodeFromTextField() {
         return tfCode.getText();
     }
 
+    /**
+     * Gets the name entered in the text field.
+     * @return The name as a string.
+     */
     String getNameFromTextField() {
         return tfName.getText();
     }
 
+    /**
+     * Gets the specialization entered in the text field.
+     * @return The specialization as a string.
+     */
     String getSpecializationFromTextField() {
         return tfSpecialization.getText();
     }
 
+    /**
+     * Gets the availability entered in the text field.
+     * @return The availability as a string.
+     */
     String getAvailabilityFromTextField() {
         return tfAvailability.getText();
     }

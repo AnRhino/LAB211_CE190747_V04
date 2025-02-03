@@ -8,10 +8,12 @@ package database;
 /**
  * V04 - Doctor management program
  * 
- * Represents a Doctor with attributes such as code, name, specialization, and availability.
- * Provides methods to access and modify these attributes.
- *
  * @author Nguyen Ho Phuoc An - CE190747
+ */
+/**
+ * Represents a Doctor with attributes such as code, name, specialization, and
+ * availability.
+ * Provides methods to access and modify these attributes.
  */
 public class Doctor {
 
@@ -23,10 +25,10 @@ public class Doctor {
     /**
      * Constructor to initialize a Doctor object with specified attributes.
      *
-     * @param code Unique code for the doctor
-     * @param name Name of the doctor
+     * @param code           Unique code for the doctor
+     * @param name           Name of the doctor
      * @param specialization Specialization of the doctor
-     * @param availability Availability status of the doctor
+     * @param availability   Availability status of the doctor
      */
     public Doctor(String code, String name, String specialization, int availability) {
         this.code = code; // Set the code

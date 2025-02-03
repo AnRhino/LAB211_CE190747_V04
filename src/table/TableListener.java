@@ -9,24 +9,36 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- *
- * @author PeterNguyen
+ * TableListener class handles actions for the TableForm.
  */
 public class TableListener implements ActionListener {
 
-    private final TableForm form;
+    // Reference to the TableForm
+    private final TableForm form; 
 
+    /**
+     * Constructor for TableListener.
+     * @param form The TableForm associated with this listener.
+     */
     public TableListener(TableForm form) {
+        // Initialize the form reference
         this.form = form;
     }
 
+    /**
+     * Handles button click events.
+     * @param e The action event triggered by button clicks.
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
+        // Switch based on the action command
         switch (e.getActionCommand()) {
             case "Search again":
+                // Navigate back to the search form
                 form.goSearch();
                 break;
             case "Menu":
+                // Navigate back to the menu
                 form.goMenu();
                 break;
         }

@@ -14,10 +14,10 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
- *
- * @author PeterNguyen
+ * SearchForm class provides the user interface for searching doctors.
  */
 public class SearchForm extends JFrame{
+    // UI components
     private final JLabel lbSearch = new JLabel("Find what: ");
     private final JTextField tfSearchText = new JTextField();
     private final JPanel searchPanel = new JPanel();
@@ -27,6 +27,9 @@ public class SearchForm extends JFrame{
     private final JButton btnSearch = new JButton("Search");
     private final JPanel buttonPanel = new JPanel();
     
+    /**
+     * Adds the search panel to the form.
+     */
     private void addSearchPanel() {
         searchPanel.setLayout(new GridLayout(1, 2));
         searchPanel.add(lbSearch);
@@ -34,6 +37,9 @@ public class SearchForm extends JFrame{
         this.add(searchPanel);
     }
     
+    /**
+     * Adds buttons to the form.
+     */
     private void addButtons() {
         buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 30, 0));
         btnMenu.addActionListener(searchListener);
@@ -43,6 +49,9 @@ public class SearchForm extends JFrame{
         this.add(buttonPanel);
     }
     
+    /**
+     * Sets up the window for the search form.
+     */
     private void setupWindow() {
         this.setTitle("Search Doctor");
         this.setLocationRelativeTo(null);
@@ -54,11 +63,17 @@ public class SearchForm extends JFrame{
         this.setSize(325, this.getHeight());
     }
     
+    /**
+     * Runs the search form.
+     */
     public void run() {
         setupWindow();
         this.setVisible(true);
     }
     
+    /**
+     * Navigates to the results table after searching.
+     */
     void goTable() {
         this.dispose();
         String[] header = {"Code", "Name", "Specialization", "Availability"};
@@ -67,6 +82,9 @@ public class SearchForm extends JFrame{
         searchTable.run();
     }
     
+    /**
+     * Navigates back to the menu.
+     */
     void goMenu() {
         this.dispose();
         menu.MenuForm menuForm = new menu.MenuForm();
