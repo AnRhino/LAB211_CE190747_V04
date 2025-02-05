@@ -7,8 +7,10 @@ package database;
 
 /**
  * V04 - Doctor management program
- * 
+ *
  * @author Nguyen Ho Phuoc An - CE190747
+ * 
+ * Last modified: 3/2/2025
  */
 /**
  * Represents a Doctor with attributes such as code, name, specialization, and

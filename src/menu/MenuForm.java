@@ -11,8 +11,10 @@ import javax.swing.JFrame;
 
 /**
  * V04 - Doctor management program
- * 
+ *
  * @author Nguyen Ho Phuoc An - CE190747
+ * 
+ * Last modified: 3/2/2025
  */
 /**
  * MenuForm class provides the main menu interface for the application.
