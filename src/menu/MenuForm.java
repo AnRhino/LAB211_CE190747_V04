@@ -58,16 +58,29 @@ public class MenuForm extends JFrame {
      * Adds buttons to the menu form.
      */
     private void addButtons() {
-        // Add buttons to the form
+        // Add the button to insert a new doctor
         this.add(btnInsertDoctor);
+        // Add action listener for inserting a new doctor
         btnInsertDoctor.addActionListener(menuListener);
+        
+        // Add the button to search for a doctor
         this.add(btnSearchDoctor);
+        // Add action listener for searching a doctor
         btnSearchDoctor.addActionListener(menuListener);
+        
+        // Add the button to update a doctor's information
         this.add(btnUpdateDoctor);
+        // Add action listener for updating a doctor's information
         btnUpdateDoctor.addActionListener(menuListener);
+        
+        // Add the button to delete a doctor
         this.add(btnDeleteDoctor);
+        // Add action listener for deleting a doctor
         btnDeleteDoctor.addActionListener(menuListener);
+        
+        // Add the button to exit the application
         this.add(btnExit);
+        // Add action listener for exiting the application
         btnExit.addActionListener(menuListener);
     }
 

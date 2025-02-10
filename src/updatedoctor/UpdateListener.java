@@ -59,10 +59,13 @@ public class UpdateListener implements ActionListener {
                 }
                 break;
             case "Update":
-                // Get the updated information from the form
+                // Get the doctor's code
                 String code = doctor.getCode();
+                // Get the name from the text field
                 String name = form.getNameFromTextField();
+                // Get the specialization from the text field
                 String specialization = form.getSpecializationFromTextField();
+                // Get the availability from the text field
                 String availability = form.getAvailabilityFromTextField();
                 // Update the doctor's information in the database
                 database.DoctorDatabase.updateDoctor(code, name, specialization, availability);

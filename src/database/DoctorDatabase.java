@@ -95,13 +95,19 @@ public class DoctorDatabase {
 
         // Create a 2D array to hold the output
         String[][] output = new String[doctorList.size()][4];
+        // Initialize a counter for the output array
         int count = 0;
         // Populate the output array with doctor details
         for (Doctor doctor : doctorList) {
+            // Store the doctor's code in the output array
             output[count][0] = doctor.getCode();
+            // Store the doctor's name in the output array
             output[count][1] = doctor.getName();
+            // Store the doctor's specialization in the output array
             output[count][2] = doctor.getSpecialization();
+            // Store the doctor's availability in the output array
             output[count][3] = doctor.getAvailability() + "";
+            // Increment the counter
             count++;
         }
 
@@ -151,6 +157,7 @@ public class DoctorDatabase {
         if (hMapDoctor.keySet().contains(code)) {
             return "Code already exists";
         }
+        // Return null if valid
         return null;
     }
 
@@ -167,6 +174,7 @@ public class DoctorDatabase {
         if (name.length() == 0) {
             return "Name must not be empty";
         }
+        // Return null if valid
         return null;
     }
 
@@ -183,6 +191,7 @@ public class DoctorDatabase {
         if (specialization.length() == 0) {
             return "Specialization must not be empty";
         }
+        // Return null if valid
         return null;
     }
 
@@ -207,7 +216,8 @@ public class DoctorDatabase {
         if (availability.startsWith("-")) {
             return "Availability must be non-negative";
         }
-        return null;
+        // Return null if valid
+        return null; 
     }
 
     /**
@@ -236,6 +246,7 @@ public class DoctorDatabase {
         if (DoctorDatabase.checkAvailabilityValid(availability) != null) {
             return DoctorDatabase.checkAvailabilityValid(availability);
         }
+        // Return null if valid
         return null;
     }
 }

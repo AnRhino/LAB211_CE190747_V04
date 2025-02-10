@@ -45,12 +45,15 @@ class InsertListener implements ActionListener {
         // Switch based on the action command
         switch (e.getActionCommand()) {
             case "Insert":
-                // Get the code, name, specialization, and availability from the form
+                // Retrieve the doctor's code from the text field
                 String code = form.getCodeFromTextField();
+                // Retrieve the doctor's name from the text field
                 String name = form.getNameFromTextField();
+                // Retrieve the doctor's specialization from the text field
                 String specialization = form.getSpecializationFromTextField();
+                // Retrieve the doctor's availability from the text field
                 String availability = form.getAvailabilityFromTextField();
-                // Validate the input fields
+                // Check if all input fields are valid
                 String error = DoctorDatabase.checkAllValid(code, name, specialization, availability);
                 // Check for validation errors
                 if (error != null) {
