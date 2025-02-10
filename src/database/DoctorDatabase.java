@@ -69,10 +69,10 @@ public class DoctorDatabase {
     public static String[][] searchDoctor(String searchText) {
         // Convert search text to uppercase
         searchText = searchText.toUpperCase();
-        // Create a list to store matching doctors
+        // Create a list to hold matching doctors
         List<Doctor> doctorList = new ArrayList<>();
 
-        // Iterate through all doctors in the HashMap
+        // Iterate through the doctors in the HashMap
         for (Doctor doctor : hMapDoctor.values()) {
             // Check if the doctor's details match the search text
             if (doctor.getCode().contains(searchText)
@@ -105,7 +105,7 @@ public class DoctorDatabase {
             count++;
         }
 
-        // Return the output array
+        // Return the array of matching doctors
         return output;
     }
 
@@ -147,11 +147,10 @@ public class DoctorDatabase {
         if (!code.startsWith("DOC")) {
             return "Code must start with \"DOC\"";
         }
-        // Check if code already exists
+        // Check if code already exists in the HashMap
         if (hMapDoctor.keySet().contains(code)) {
             return "Code already exists";
         }
-        // Return null if code is valid
         return null;
     }
 
@@ -168,7 +167,6 @@ public class DoctorDatabase {
         if (name.length() == 0) {
             return "Name must not be empty";
         }
-        // Return null if name is valid
         return null;
     }
 
@@ -185,7 +183,6 @@ public class DoctorDatabase {
         if (specialization.length() == 0) {
             return "Specialization must not be empty";
         }
-        // Return null if specialization is valid
         return null;
     }
 
@@ -210,7 +207,6 @@ public class DoctorDatabase {
         if (availability.startsWith("-")) {
             return "Availability must be non-negative";
         }
-        // Return null if availability is valid
         return null;
     }
 
@@ -224,23 +220,22 @@ public class DoctorDatabase {
      * @return An error message if any field is invalid, otherwise null.
      */
     public static String checkAllValid(String code, String name, String specialization, String availability) {
-        // Check if code is valid
+        // Validate the doctor code
         if (DoctorDatabase.checkCodeValid(code) != null) {
             return DoctorDatabase.checkCodeValid(code);
         }
-        // Check if name is valid
+        // Validate the doctor's name
         if (DoctorDatabase.checkNameValid(name) != null) {
             return DoctorDatabase.checkNameValid(name);
         }
-        // Check if specialization is valid
+        // Validate the doctor's specialization
         if (DoctorDatabase.checkSpecializationValid(specialization) != null) {
             return DoctorDatabase.checkSpecializationValid(specialization);
         }
-        // Check if availability is valid
+        // Validate the doctor's availability
         if (DoctorDatabase.checkAvailabilityValid(availability) != null) {
             return DoctorDatabase.checkAvailabilityValid(availability);
         }
-        // Return null if all fields are valid
         return null;
     }
 }
