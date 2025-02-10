@@ -232,18 +232,22 @@ public class DoctorDatabase {
     public static String checkAllValid(String code, String name, String specialization, String availability) {
         // Validate the doctor code
         if (DoctorDatabase.checkCodeValid(code) != null) {
+            // Return error message
             return DoctorDatabase.checkCodeValid(code);
         }
         // Validate the doctor's name
         if (DoctorDatabase.checkNameValid(name) != null) {
+            // Return error message
             return DoctorDatabase.checkNameValid(name);
         }
         // Validate the doctor's specialization
         if (DoctorDatabase.checkSpecializationValid(specialization) != null) {
+            // Return error message
             return DoctorDatabase.checkSpecializationValid(specialization);
         }
         // Validate the doctor's availability
         if (DoctorDatabase.checkAvailabilityValid(availability) != null) {
+            // Return error message
             return DoctorDatabase.checkAvailabilityValid(availability);
         }
         // Return null if valid
