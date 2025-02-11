@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  * V04 - Doctor management program
  *
  * @author Nguyen Ho Phuoc An - CE190747
- * 
+ *
  * Last modified: 3/2/2025
  */
 /**
@@ -28,7 +28,7 @@ public class DeleteListener implements ActionListener {
 
     /**
      * Constructor for DeleteListener.
-     * 
+     *
      * @param form The DeleteForm associated with this listener.
      */
     public DeleteListener(DeleteForm form) {
@@ -38,7 +38,7 @@ public class DeleteListener implements ActionListener {
 
     /**
      * Handles button click events.
-     * 
+     *
      * @param e The action event triggered by button clicks.
      */
     @Override
@@ -64,8 +64,10 @@ public class DeleteListener implements ActionListener {
                 // Prompt for confirmation
                 String confirm = JOptionPane.showInputDialog(null,
                         "To confirm, type \"" + doctor.getCode() + "\" in the box below");
-                // Check if confirmation matches the doctor's code
-                if (confirm.equals(doctor.getCode())) {
+                // Check if confirm is null
+                if (confirm == null) {
+                    break; // Break switch statement
+                } else if (confirm.equals(doctor.getCode())) { // Check if confirmation matches the doctor's code
                     // Delete the doctor from the database
                     database.DoctorDatabase.deleteDoctor(doctor.getCode());
                     // Show success message

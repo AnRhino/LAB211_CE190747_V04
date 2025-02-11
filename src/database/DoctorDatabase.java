@@ -231,7 +231,7 @@ public class DoctorDatabase {
      */
     public static String checkAllValid(String code, String name, String specialization, String availability) {
         // Validate the doctor code
-        if (DoctorDatabase.checkCodeValid(code) != null) {
+        if (code != null && DoctorDatabase.checkCodeValid(code) != null) {
             // Return error message
             return DoctorDatabase.checkCodeValid(code);
         }

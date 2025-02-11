@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  * V04 - Doctor management program
  *
  * @author Nguyen Ho Phuoc An - CE190747
- * 
+ *
  * Last modified: 3/2/2025
  */
 /**
@@ -28,7 +28,7 @@ public class UpdateListener implements ActionListener {
 
     /**
      * Constructor for UpdateListener.
-     * 
+     *
      * @param form The UpdateForm associated with this listener.
      */
     public UpdateListener(UpdateForm form) {
@@ -38,7 +38,7 @@ public class UpdateListener implements ActionListener {
 
     /**
      * Handles button click events.
-     * 
+     *
      * @param e The action event triggered by button clicks.
      */
     @Override
@@ -67,12 +67,20 @@ public class UpdateListener implements ActionListener {
                 String specialization = form.getSpecializationFromTextField();
                 // Get the availability from the text field
                 String availability = form.getAvailabilityFromTextField();
-                // Update the doctor's information in the database
-                database.DoctorDatabase.updateDoctor(code, name, specialization, availability);
-                // Show success message
-                JOptionPane.showMessageDialog(null, "Updated successfully!");
-                // Navigate back to the menu
-                form.goMenu();
+                // Check if all input fields are valid
+                String error = database.DoctorDatabase.checkAllValid(null, name, specialization, availability);
+                // Check for validation errors
+                if (error != null) {
+                    // Show error message if validation fails
+                    JOptionPane.showMessageDialog(null, error);
+                } else {
+                    // Update the doctor's information in the database
+                    database.DoctorDatabase.updateDoctor(code, name, specialization, availability);
+                    // Show success message
+                    JOptionPane.showMessageDialog(null, "Updated successfully!");
+                    // Navigate back to the menu
+                    form.goMenu();
+                }
                 break;
             case "Menu":
                 // Navigate back to the menu
